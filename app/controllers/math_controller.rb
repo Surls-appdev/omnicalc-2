@@ -1,10 +1,10 @@
 class MathController < ApplicationController
 
-  def add
+  def muggle_add
     render({ :template => "math_templates/add_form.html.erb"})
   end
 
-  def addition_results
+  def add_results
     @first = params.fetch("first_num").to_f
 
     @second = params.fetch("second_num").to_f
@@ -15,7 +15,18 @@ class MathController < ApplicationController
 
   end 
   
-  def muggle_add
-     render({ :template => "math_templates/add_form.html.erb"})
+  
+
+  def subtract
+    render({ :template => "math_templates/subtract_form.html.erb"})
   end
+
+  def multiply
+    render({ :template => "math_templates/multiply_form.html.erb"})
+  end
+
+  def divide
+    render({ :template => "math_templates/divide_form.html.erb"})
+  end
+
 end
