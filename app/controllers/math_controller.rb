@@ -14,11 +14,19 @@ class MathController < ApplicationController
     render({ :template => "math_templates/add_results.html.erb"})
 
   end 
-  
-  
 
   def subtract
     render({ :template => "math_templates/subtract_form.html.erb"})
+  end
+
+  def subtract_results
+    @first = params.fetch("first_num").to_f
+
+    @second = params.fetch("second_num").to_f
+
+    @result = @first - @second
+
+    render({ :template => "math_templates/subtract_results.html.erb"})
   end
 
   def multiply

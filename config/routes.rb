@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get("/add", { :controller => "math", :action=> "muggle_add"} )
   get("/wizard_add", { :controller => "math", :action=> "add_results"} )
 
-  get("/wizard_subtract", { :controller => "math", :action=> "subtract"} )
+  get("/subtract", { :controller => "math", :action=> "subtract"} )
   get("/wizard_subtract", { :controller => "math", :action=> "subtract_results"} )
 
   get("/wizard_multiply", { :controller => "math", :action=> "multiply"} )
